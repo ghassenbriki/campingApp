@@ -285,7 +285,7 @@ exports.deletComment=async (req,res)=>
             let id1=req.user._id.toString()
             let id2=prod.comments.id(req.params.commentID).author.toString()
          
-            if( id1==id2 && req.body.comment )
+            if( id1==id2 )
              {
                
                 prod.comments.id(req.params.commentID).remove()
